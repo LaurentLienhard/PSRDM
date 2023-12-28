@@ -12,10 +12,19 @@ Name for the RDP connection
 .PARAMETER Folder
 Folder where to create the RDP connexion
 
+.PARAMETER CanonicalName
+CanonicalName of the computer
+
+
 .EXAMPLE
 New-Computer -ComputerName "MyComputer" -Folder "Folder1/Folder2"
 
 Create a RDP connection fot computer MyCOmputer in the folder Folder2 under Folder1
+
+.EXAMPLE
+New-Computer -CanonicalName "Folder1/Folder2/MyComputer"
+
+Create a RDP connection fot computer MyComputer in the folder Folder2 under Folder1
 
 .NOTES
 General notes
