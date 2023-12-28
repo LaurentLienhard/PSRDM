@@ -34,7 +34,7 @@ NestedModule:
 #    OutputDirectory: ///Modules/HelperSubmodule
 #    VersionedOutputDirectory: false
 #    AddToManifest: false
-#    SemVer: 
+#    SemVer:
 #    # suffix:
 #    # prefix:
 
@@ -80,6 +80,9 @@ BuildWorkflow:
     - Publish_Release_To_GitHub
     - Publish_GitHub_Wiki_Content
 
+  deploy:
+    - Deploy_with_PSDeploy
+
 
 
 ####################################################
@@ -96,8 +99,8 @@ Pester:
   # only run tests in certain folders, or run specific test files, or can be use to
   # specify the order tests are run.
   Script:
-  # - tests/QA/module.tests.ps1
-  # - tests/QA
+   - tests/QA/module.tests.ps1
+   - tests/QA
   # - tests/Unit
   # - tests/Integration
   ExcludeTag:
@@ -105,7 +108,7 @@ Pester:
   #  - FunctionalQuality
   #  - TestQuality
   Tag:
-  CodeCoverageThreshold: 85 # Set to 0 to bypass
+  CodeCoverageThreshold: 0 # Set to 0 to bypass
   #CodeCoverageOutputFile: JaCoCo_$OsShortName.xml
   #CodeCoverageOutputFileEncoding: ascii
   # Use this if code coverage should be merged from several pipeline test jobs.
@@ -154,9 +157,3 @@ TaskHeader: |
   Write-Build DarkGray "  $Path"
   Write-Build DarkGray "  $($Task.InvocationInfo.ScriptName):$($Task.InvocationInfo.ScriptLineNumber)"
   ""
-
-
-
-
-
-

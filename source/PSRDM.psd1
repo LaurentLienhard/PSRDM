@@ -33,7 +33,7 @@ Copyright = '(c) LIENHARD Laurent. All rights reserved.'
 Description = 'Configuration management for Remote Desktop Manager'
 
 # Minimum version of the PowerShell engine required by this module
-PowerShellVersion = '5.0'
+PowerShellVersion = '7.4.0'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
@@ -51,7 +51,12 @@ PowerShellVersion = '5.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @()
+RequiredModules = @(
+    @{
+        ModuleName = 'Devolutions.PowerShell'
+        ModuleVersion = '2023.3.3'
+    }
+)
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -129,15 +134,3 @@ PrivateData = @{
 # DefaultCommandPrefix = ''
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
