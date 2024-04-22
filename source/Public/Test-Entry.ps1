@@ -10,7 +10,7 @@ Test if entry passe as paramter already exist
 .PARAMETER Entry
 Name of the entry to test
 For Folder under format "Folder1" for root folder or "Folder1/Folder2/Folder3" for subfolder
-For Computer wit hthe name of the computer
+For Computer with the name of the computer
 
 .EXAMPLE
 Test-Entry -Entry 'Folder1' -Type Folder

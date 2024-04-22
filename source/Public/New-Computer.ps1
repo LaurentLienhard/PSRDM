@@ -62,6 +62,8 @@ General notes
             }
             $FormatFolder = ($Folder -replace ('/', '\'))
             $Session = New-RDMSession -Name $ComputerName -Group $FormatFolder -Type RDPConfigured -Host $ComputerName
+            $Session.CredentialInheritedMode = 'Default'
+            $Session.CredentialConnectionID = "a449a147-3ac8-4165-9307-8f4d879897a5"
             Set-RDMSession -Session $Session
         }
     }
